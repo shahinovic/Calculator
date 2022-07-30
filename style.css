@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #fff;
+    color: black;
+    display: grid;
+    place-items: center;
+    font-family: 'Play', sans-serif;
+}
+
+.container {
+    border: 1px solid rgb(80, 76, 76);
+    width: 1000px;
+    height: 1000px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.fun-btns {
+    border: 1px solid rgb(80, 76, 76);
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.fun-btns>span {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid rgb(80, 76, 76);
+    font-weight: 900;
+    font-size: 1.5em;
+    position: absolute;
+    left: calc(50% - 25px);
+    top: calc(50% - 25px);
+    display: grid;
+    place-items: center;
+    background-color: #fff;
+    color: black;
+    transition: 0.3s linear;
+}
+
+.fa-superscript::before {
+    content: "^";
+}
+
+.fun-btns>span:hover {
+    color: #fff;
+    background-color: black;
+    font-size: 2em;
+}
+
+.fun-btns>span::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f103";
+    font-weight: 900;
+    position: absolute;
+    top: 100%;
+    font-size: 1.3em;
+    color: rgb(240, 240, 240);
+}
+
+.fun-btns>span::after {
+    font-family: "Font Awesome 6 Free";
+    content: "\f102";
+    font-weight: 900;
+    position: absolute;
+    bottom: 100%;
+    font-size: 1.3em;
+    color: rgb(240, 240, 240);
+}
+
+.fun-btns>span:hover::before,
+.fun-btns>span:hover::after {
+    color: rgb(211, 205, 205);
+    font-size: 1.4em;
+}
+
+.fun-btns>span:nth-child(1) {
+    position: relative;
+}
+
+.fun-btns>span>span:nth-child(1) {
+    position: absolute;
+    display: grid;
+    place-items: center;
+}
+
+.info {
+    border: 1px solid rgb(80, 76, 76);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 480px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.monitor {
+    height: 50%;
+    border: 1px solid rgb(80, 76, 76);
+    position: relative;
+}
+
+.monitor .view {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 100px;
+    border: 1px solid rgb(80, 76, 76);
+    border-radius: 20px;
+    font-size: 1.5em;
+    padding: 20px;
+}
+
+.monitor .res {
+    position: absolute;
+    bottom: 115px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(80, 76, 76);
+    display: grid;
+    place-items: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    transition: 0.3s linear;
+}
+
+.monitor .res:hover {
+    color: #fff;
+    background-color: #000;
+    font-size: 1.6em;
+}
+
+.nums {
+    height: 50%;
+    border: 1px solid rgb(80, 76, 76);
+    position: relative;
+}
+
+.nums span {
+    display: inline-flex;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    color: black;
+    background-color: #fff;
+    font-size: 1.5em;
+    transition: 0.3s linear;
+    border: 1px solid rgb(80, 76, 76);
+
+}
+
+.nums span:hover {
+    color: #fff;
+    background-color: black;
+    font-size: 2em;
+    color: #fff;
+    background-color: black;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.nums span:nth-child(1),
+.nums span:nth-child(2),
+.nums span:nth-child(3) {
+    position: absolute;
+    width: calc(90% / 3);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10px;
+}
+
+.nums span:nth-child(1) {
+    transform: translateX(-155%);
+}
+
+.nums span:nth-child(3) {
+    transform: translateX(55%);
+}
+
+.nums span:nth-child(4),
+.nums span:nth-child(5),
+.nums span:nth-child(6) {
+    position: absolute;
+    width: calc(80% / 3);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+}
+
+.nums span:nth-child(4) {
+    transform: translateX(-155%);
+}
+
+.nums span:nth-child(6) {
+    transform: translateX(55%);
+}
+
+.nums span:nth-child(7),
+.nums span:nth-child(8),
+.nums span:nth-child(9) {
+    position: absolute;
+    width: calc(70% / 3);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 110px;
+}
+
+.nums span:nth-child(7) {
+    transform: translateX(-155%);
+}
+
+.nums span:nth-child(9) {
+    transform: translateX(55%);
+}
+
+.nums span:nth-child(10) {
+    position: absolute;
+    top: 160px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 40px;
+}
